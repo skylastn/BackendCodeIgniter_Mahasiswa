@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /sop-platform
+#RewriteBase /
+#RewriteRule (.*) - [E=Cache-Control:no-cache]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?/$1 [L]
